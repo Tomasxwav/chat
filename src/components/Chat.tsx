@@ -23,7 +23,7 @@ export const Chat = () => {
 
   return (
     <div className='flex flex-col justify-between h-screen'>
-      <div className='my-10 px-10 sm:px-20 w-full h-full overflow-scroll'>
+      <div className='my-10 px-10 sm:px-20 w-full h-full overflow-y-scroll'>
         {messages.map((message, index) =>
           message.split('')[0] === '!' ? (
             <div key={index} className='flex gap-5 my-5 justify-self-start'>
