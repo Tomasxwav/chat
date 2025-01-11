@@ -23,25 +23,28 @@ export const Chat = () => {
 
   return (
     <div className='flex flex-col justify-between h-screen'>
-      <div className='my-10 px-10 sm:px-20 overflow-hidden w-full h-full'>
+      <div className='my-10 px-10 sm:px-20 w-full h-full overflow-scroll'>
         {messages.map((message, index) =>
           message.split('')[0] === '!' ? (
-            <div
-              key={index}
-              className='flex gap-5 my-5 justify-self-start h-fit'
-            >
-              <Globe message={message} color='bg-green-600 h-fit' />
+            <div key={index} className='flex gap-5 my-5 justify-self-start'>
+              <Globe message={message} color='bg-green-600 ' />
             </div>
           ) : (
-            <div key={index} className='flex gap-5 my-5 justify-self-end'>
-              <Globe message={message} color='bg-green-300' />
+            <div
+              key={index}
+              className='flex flex-wrap gap-5 my-5 justify-self-end '
+            >
+              <Globe
+                message={message}
+                color='bg-green-300 flex flex-wrap h-10'
+              />
             </div>
           )
         )}
       </div>
       <form
         onSubmit={(e) => handleSubmit(e)}
-        className='my-10 flex gap-5 mx-0 justify-center'
+        className='mb-4 mt-2 flex gap-5 mx-0 justify-center'
       >
         <input
           className='py-2 rounded px-4 text-black w-[70vw]'

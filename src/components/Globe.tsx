@@ -9,9 +9,9 @@ export const Globe = ({
 }) => {
   return (
     <div
-      className={`h-fit w-fit max-w-[90vw] flex flex-wrap overflow-hidden text-black px-10 py-2 rounded-lg text-right ${color}`}
+      className={`rounded-lg max-w-[80vw] flex min-h-fit px-4 py-2 text-black ${color}`}
     >
-      <p>{message}</p>
+      <span className='max-w-full break-words'>{message}</span>
     </div>
   )
 }
